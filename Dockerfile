@@ -28,7 +28,10 @@ RUN mkdir -p /parse/cloud
 #USER git
 #initialize git repo
 WORKDIR /parse/cloud
-RUN git --bare init
+ADD main.js /parse/cloud/main.js
+RUN git config --global user.email "admin@openparse.io" && \
+	  git config --global user.name "openparse Admin"
+RUN git init && git add main.js && git commit -m "added initial main.js"
 
 # This is where the repositories will be stored, and
 # should be mounted from the host (or a volume container)
