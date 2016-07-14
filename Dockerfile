@@ -5,7 +5,6 @@ MAINTAINER Anthony Hogg anthony@hogg.fr
 
 # The container listens on port 80, map as needed
 EXPOSE 80
-
 # We need the following:
 # - git, because that gets us the git-http-backend CGI script
 # - fcgiwrap, because that is how nginx does CGI
