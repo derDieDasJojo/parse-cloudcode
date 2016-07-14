@@ -23,16 +23,16 @@ COPY run.sh /run.sh
 
 #RUN addgroup git && adduser -g "" -D -G git git
 #RUN passwd -d 'git' git	#passwd -d 'user' passwd
-RUN mkdir -p /git
+RUN mkdir -p /parse/cloud
 #RUN chown git:git /git
 #USER git
 #initialize git repo
-WORKDIR /git
+WORKDIR /parse/cloud
 RUN git --bare init
 
 # This is where the repositories will be stored, and
 # should be mounted from the host (or a volume container)
-VOLUME ["/git"]
+VOLUME ["/parse/cloud"]
     
 
 # launch fcgiwrap via spawn-fcgi; launch nginx in the foreground
