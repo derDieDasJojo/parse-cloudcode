@@ -1,7 +1,7 @@
 # small is beautiful
 FROM alpine:latest
 
-MAINTAINER Anthony Hogg anthony@hogg.fr
+MAINTAINER Jojo jojo@openparse.io
 
 # The container listens on port 80, map as needed
 EXPOSE 80
